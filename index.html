@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="dist/output.css" rel="stylesheet" />
+    <title>Aku gabut🐷</title>
+  </head>
+  <body class="bg-slate-600">
+    <div class="container mx-auto">
+      <div class="flex h-screen justify-center items-center">
+        <div class="rounded shadow-xl px-8 py-5 bg-white border border-white">
+            <h2 class="text-center font-bold text-3xl" id="counter">0</h2>
+            <button class="font-bold text-lg bg-sky-300 px-5 py-1 rounded-xl" onclick="kurang()">-</button>
+            <button class="font-bold text-lg bg-sky-300 px-5 py-1 rounded-xl" onclick="reset()">Reset</button>
+            <button class="font-bold text-lg bg-sky-300 px-5 py-1 rounded-xl" onclick="tambah()">+</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        const hasil = document.querySelector('#counter')
+        let count = 0
+        const kurang = () => {
+            count--
+            hasil.innerHTML = count
+            hasil.style.color = 'red'
+        }
+        const reset = () => {
+            count = 0
+            hasil.innerHTML = count
+            hasil.style.color = 'black'
+        }
+        const tambah = () => {
+            count++
+            hasil.innerHTML = count
+            hasil.style.color = 'green'
+        }
+    </script>
+  </body>
+</html>
